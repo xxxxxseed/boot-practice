@@ -14,11 +14,11 @@ public class HelloResponseDtoTest {
 
         HelloResponseDto dto = new HelloResponseDto(name, amount);
 
-//        assertThat(dto.getName()).isEqualTo(name);
-//        assertThat(dto.getAmount()).isEqualTo(amount);
-        assertThat(dto.getName()).as("HelloResponseDto name")
-                .isEqualToIgnoringCase("TEST");
-        assertThat(dto.getAmount()).as("HelloResponseDto amount")
-                .isCloseTo(1050, Percentage.withPercentage(5.2));
+        assertThat(dto.getName()).isEqualTo(name);
+        assertThat(dto.getAmount()).isEqualTo(amount);
+//        assertThat(dto.getName()).as("HelloResponseDto name")
+//                .isEqualToIgnoringCase("TEST");
+//        assertThat(dto.getAmount()).as("HelloResponseDto amount")
+//                .isCloseTo(1050, Percentage.withPercentage(5.2));
     }
 }
