@@ -27,9 +27,11 @@ public class ProfileController {
 
     @GetMapping("/profiles")
     public String profiles(){
-        String[] strArray = env.getActiveProfiles();
-        String strArrayToString = Arrays.toString(strArray);
+        String[] defaultProfilesArrays = env.getDefaultProfiles();
+        String[] activeProfilesArrays = env.getActiveProfiles();
+        String defaultProfiles = Arrays.toString(defaultProfilesArrays);
+        String activeProfiles = Arrays.toString(activeProfilesArrays);
 
-        return strArrayToString;
+        return "defaultProfiles: " + defaultProfiles + ", activeProfiles: " + activeProfiles;
     }
 }
